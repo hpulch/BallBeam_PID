@@ -7,10 +7,17 @@ Reference Materials:
   -  Stepper Motor https://pdf1.alldatasheet.com/datasheet-pdf/download/1141537/STEPPERONLINE/17HS08-1004S.html
 
 # Mechanical Design Considerations
-In uMichigan's Ball and Beam model there is this assumption that the relationship between $/alpha$ and $/theta$ is approximately linearized by $d/L$
+In uMichigan's Ball and Beam model there is this assumption that the relationship between $\alpha$ and $\theta$ is approximately linearized by $d \over L$. In order to use this assumption we need to make some mechanical design decisions to minimize the non-linear component of the system.
+
+$$
+Displacement = d sin(\theta)
 $$
 
 $$
+Displacement-Acos(\beta) = Lsin(\alpha)
+$$
+
+The nonlinear component $\beta$ can be set to its maximum when $\theta = 0$ which can be expressed as $\beta_{max} = sin^{-1}({d \over A})$. To minimize $\beta_{max}$ a suitable $A$ and $d$ should be selected such that $d << A$. Selecting $d$ to be too small will result in a low displacement and selecting $A$ to be too large will scale up the displacement error.
 
 # Electronic Design Considerations
 
