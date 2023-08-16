@@ -2,7 +2,8 @@
 Documentation and Application for a PID controlled Ball-and-beam style plant
 
 # Mechanical Design Considerations
-![Screenshot](UMichiganModel_BallandBeam.jpg)
+sdfgsdfgggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg.
+![Screenshot](https://github.com/hpulch/BallBeam_PID/blob/main/uMichiganModel_BallandBeam.jpg)
 In uMichigan's Ball and Beam model there is this assumption that the relationship between $\alpha$ and $\theta$ is approximately linearized by $d \over L$. In order to use this assumption we need to make some mechanical design decisions to minimize the non-linear component of the system.
 
 $$
