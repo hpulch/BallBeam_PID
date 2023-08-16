@@ -12,7 +12,7 @@ Displacement = d sin(\theta)
 $$
 
 $$
-Displacement-Acos(\beta) = Lsin(\alpha)
+Displacement(cos(\beta)) = Lsin(\alpha)
 $$
 
 The nonlinear component $\beta$ can be set to its maximum when $\theta = 0$ which can be expressed as $\beta_{max} = sin^{-1}({d \over A})$. To minimize $\beta_{max}$ a suitable $A$ and $d$ should be selected such that $d << A$. Selecting $d$ to be too small will result in a low displacement and selecting $A$ to be too large will scale up the displacement error.
