@@ -1,60 +1,28 @@
 # BallBeam_PID
-Documentation, application and implementation for a PID controlled Ball-and-beam style plant.
 
+Balance an object onto a beam about a set point and reject disturbances. 
 
-
-## Mechanical Design
-The ball and beam system is a well studied control problem, uMichigan has a great model available online.
 ![Screenshot](https://github.com/hpulch/BallBeam_PID/blob/main/uMichiganModel_BallandBeam.jpg)
 
-### Transfer Function
+The objective of this project is to design and develop a prototype plant and PID controller to demonstrate a practical solution to the [ball and beam control problem](https://ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling#1). System response of this control case is categorized as [maginally stable](https://en.wikipedia.org/wiki/Marginal_stability) and, as such, using a proportional controller will cause an oscillation about the system's target position. A heuristic approach to tuning the PID parameters can be implemented using the [Ziegler-Nichols method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method), where the oscillating properties of a proportionally controlled plant can be used to develop $K_p, K_i, K_d$ gain parameters to reject disturbances. 
 
-In uMichigan's Ball and Beam model there is this assumption that the relationship between $\alpha$ and $\theta$ is approximately linearized by $d \over L$. This will reduce the control problem's complexity and make the overall design pheasible.
-$$\alpha = {d \over L} \theta \tag{1}$$
+### Electromechanical Design
+IV Projects developed a very elegant physical layout which will be the reference model.
 
-Kinematic Equations
-
-$$ x=1\tag{}$$
-
-Potential Energy
-
-$$ V=\tag{}$$
-
-Kinetic Energy
-
-$$ T=\tag{}$$ 
-
-LaGrangian, Equations of Motion
-
-$$ L = T - V $$
-
-$$ L = \tag{} $$
-
-$$ 0 = {\partial L \over \partial q_j} - {d\over dt} ({\partial L \over \partial \dot q_j}) \tag{234} $$
-
-Testingdfg
-dfg
-dfgdfgdfg
+### Electronic Design
 
 
 
 
 
-
-
-
-
-
-
-# Electronic Design Considerations
-
-# Software Design Considerations
+### Software Design Considerations
 
 
 
 
 
 Reference Materials:
-  -  PID control theory from CalTech https://www.cds.caltech.edu/~murray/books/AM08/pdf/am06-pid_16Sep06.pdf
-  -  Ball and Beam system model from uMichigan https://ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling#1
+  -  [Ziegler-Nichols Method](https://www.mstarlabs.com/control/znrule.html)
+  -  [Ball and Beam system model](https://ctms.engin.umich.edu/CTMS/index.php?example=BallBeam&section=SystemModeling#1)
+  -  [Maginally Stable](https://en.wikipedia.org/wiki/Marginal_stability)
   -  Stepper Motor https://pdf1.alldatasheet.com/datasheet-pdf/download/1141537/STEPPERONLINE/17HS08-1004S.html
